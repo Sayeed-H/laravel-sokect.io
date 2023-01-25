@@ -42,7 +42,7 @@
             <div class="row chat-row">
                 <div class="chat-content">
                     <ul>
-                      
+
                     </ul>
                 </div>
 
@@ -76,7 +76,8 @@
                     }
                 });
                 socket.on('sendChatToClient', (message) => {
-                    $('.chat-content ul').append(`<li>${message}</li>`);
+                    // const obj = JSON.parse(message);
+                    $('.chat-content ul').append(`<li>${message.name + message.age + message.city }</li>`);
                 });
             });
         </script>
